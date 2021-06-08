@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="261" height="261" viewBox="0 0 261 261">
+  <defs>
+    <clipPath id="clip-LOGO_v1">
+      <rect width="261" height="261"/>
+    </clipPath>
+  </defs>
+  <g id="LOGO_v1" data-name="LOGO v1" clip-path="url(#clip-LOGO_v1)">
+    <rect width="261" height="261" fill="#fff"/>
+    <rect id="Rectangle_585" data-name="Rectangle 585" width="261" height="261" fill="#e7e1df"/>
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(16 13)" fill="none" stroke="#707070" stroke-width="3">
+      <circle cx="114.5" cy="114.5" r="114.5" stroke="none"/>
+      <circle cx="114.5" cy="114.5" r="113" fill="none"/>
+    </g>
+    <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(25 22)" fill="none" stroke="#707070" stroke-width="3">
+      <circle cx="106" cy="106" r="106" stroke="none"/>
+      <circle cx="106" cy="106" r="104.5" fill="none"/>
+    </g>
+    <text id="_J_" data-name="&lt;/J&gt;" transform="translate(103 189)" fill="#404042" font-size="40" font-family="Montserrat-SemiBold, Montserrat" font-weight="600"><tspan x="0" y="0">&lt;/</tspan><tspan y="0" font-size="90">J</tspan><tspan y="0" font-size="50">&gt;</tspan></text>
+    <text id="_C_" data-name="&lt;C&gt;" transform="translate(47 117)" fill="#404042" font-size="40" font-family="Montserrat-SemiBold, Montserrat" font-weight="600"><tspan x="0" y="0">&lt;</tspan><tspan y="0" font-size="90">C</tspan><tspan y="0">&gt;</tspan></text>
+  </g>
+</svg>
