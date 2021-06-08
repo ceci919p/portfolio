@@ -79,9 +79,16 @@ header {
   position: sticky;
   top: 0;
   padding: 1rem 1.5rem;
+  gap: 20px;
+  text-align: left;
   box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.3);
   margin: 0;
   background-color: var(--secondary);
+  display: grid;
+}
+
+header > * {
+  grid-area: 1 / 1;
 }
 
 #menuknap {
@@ -107,17 +114,34 @@ a {
   font-weight: bold;
 }
 
+#website .hero {
+  grid-column: 1/4;
+}
+
 footer {
   background-color: var(--secondary);
 }
 
-.footer_info {
-  position: sticky;
-  display: flex;
-  justify-content: space-around;
-  top: 0;
-  padding: 1rem 1.5rem;
-  margin: 0;
+.footer_info .navn,
+.mail,
+.telefon {
+  text-align: center;
+  padding: 0.5rem 0.5rem;
+}
+
+.round {
+  display: block;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.round img {
+  clip-path: circle();
+}
+
+.round p {
+  text-align: center;
 }
 
 @media (min-width: 700px) {
@@ -145,5 +169,23 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+  }
+
+  .footer_info {
+    position: sticky;
+    display: flex;
+    justify-content: space-around;
+    top: 0;
+    padding: 1rem 1.5rem;
+    margin: 0;
+  }
+
+  .section_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .round {
+    width: 25%;
   }
 }
