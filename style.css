@@ -114,6 +114,10 @@ a {
   font-weight: bold;
 }
 
+a:hover {
+  color: var(--primary);
+}
+
 #website .hero {
   grid-column: 1/4;
 }
