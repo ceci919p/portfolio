@@ -87,24 +87,34 @@ header {
   display: grid;
 }
 
-header > * {
-  grid-area: 1 / 1;
+header .logo img {
+  border-radius: 20px;
+  width: 100px;
+  display: inline;
+}
+
+header .logo {
+  grid-area: 1/2;
 }
 
 #menuknap {
   display: inline-block;
+  grid-area: 1/2;
 }
 
 #menu {
+  /* background-color: white;
+  max-width: 300px;
+  height: 200px; */
   transition: transform 0.3s;
   transform-origin: top left;
   list-style: none;
   margin: 1rem;
   padding: 1rem;
-  /*
-  background-color: white;
-  max-width: 300px;
-  height: 200px;*/
+}
+
+li a {
+  padding: 1rem;
 }
 
 a {
