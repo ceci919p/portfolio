@@ -175,6 +175,12 @@ footer {
     align-items: baseline;
   }
 
+  header .logo img {
+    border-radius: 20px;
+    width: 100px;
+    display: inline;
+  }
+
   .footer_info {
     position: sticky;
     display: flex;
