@@ -40,6 +40,8 @@ main {
 
 main > section {
   grid-column: 2/3;
+  padding-inline: 1rem;
+  padding-block: 1rem;
 }
 
 h1 {
@@ -64,6 +66,15 @@ h4 {
 
 p {
   font-family: "montserrat", sans-serif;
+  color: var(--text);
+}
+
+button {
+  margin-top: 1rem;
+  border: 0;
+  background-color: var(--primary);
+  padding: 0.75rem;
+  border-radius: 4px;
   color: var(--text);
 }
 
@@ -170,9 +181,8 @@ footer {
     justify-content: space-between;
     margin: 0;
     padding: 0;
-    padding-bottom: 0.5rem;
+
     gap: 30px;
-    overflow-x: auto;
   }
 
   #menu li {
@@ -207,10 +217,23 @@ footer {
   .section_wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+  }
+
+  .col_left {
+    background-color: var(--secondary);
+    padding: 1rem;
+  }
+
+  .col_right {
+    background-color: var(--secondary);
+    padding: 1rem;
   }
 
   .round {
     width: 25%;
+  }
+
+  .col_right {
+    grid-column: 2/3;
   }
 }
