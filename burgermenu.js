@@ -13,7 +13,9 @@ function toggleMenu() {
 
   if (erSkjult == true) {
     document.querySelector("#menuknap").textContent = "☰";
+    document.querySelector("#nav_baggrund").classList.remove("nav_style");
   } else {
     document.querySelector("#menuknap").textContent = "X";
+    document.querySelector("#nav_baggrund").classList.add("nav_style");
   }
 }
