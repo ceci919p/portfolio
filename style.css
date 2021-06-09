@@ -191,6 +191,10 @@ footer {
     display: inline;
   }
 
+  .splash {
+    grid-column: 1/4;
+  }
+
   .footer_info {
     position: sticky;
     display: flex;
