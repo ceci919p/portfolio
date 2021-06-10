@@ -196,13 +196,18 @@ a:hover {
 }
 
 .forord {
-  text-align: center;
+  /*text-align: center;*/
   grid-column: 1/4;
   background-image: linear-gradient(to right, lightpink, #f2c849);
 }
 
 .forord p {
   padding: 1rem;
+}
+
+.web_doku {
+  display: grid;
+  place-content: center;
 }
 
 footer {
@@ -297,7 +302,7 @@ footer {
     grid-template-columns: 1fr minmax(0, 600px) 1fr;
   }
 
-  .text_indhold h2,
+  .text_indhold h1,
   hr,
   p {
     grid-column: 2/3;
