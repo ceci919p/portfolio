@@ -89,6 +89,10 @@ button {
   height: 0;
 }
 
+.hide {
+  display: none;
+}
+
 .nav_style {
   background-color: white;
   padding: 1rem;
@@ -130,20 +134,8 @@ header .logo {
 }
 
 #menu {
-  /* background-color: white;
-  max-width: 300px;
-  height: 200px; */
   transition: transform 0.3s;
   transform-origin: top left;
-  /*list-style: none;*/
-  /*margin: 1rem;
-  padding: 1rem;*/
-  /*
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  background-color: white;*/
 }
 
 header ul li {
@@ -171,8 +163,6 @@ a:hover {
 }
 
 .splash {
-  /*grid-column: 1/4;
-  padding: 0;*/
   display: grid;
   align-items: end;
   grid-template-rows: 1fr auto auto 1fr;
@@ -188,6 +178,7 @@ a:hover {
   grid-area: 2/1;
   text-align: center;
   color: var(--tertiary);
+  font-size: 3em;
 }
 
 .splash p {
@@ -203,11 +194,6 @@ a:hover {
 
 .forord p {
   padding: 1rem;
-}
-
-.web_doku {
-  display: grid;
-  place-content: center;
 }
 
 footer {
@@ -241,7 +227,16 @@ footer {
   background-image: linear-gradient(to right, #f2c849, #ea819a);
 }
 
+.wide_2 {
+  grid-column: 1/4;
+  background-color: var(--secondary);
+}
+
 @media (min-width: 700px) {
+  main > section {
+    padding: 0;
+  }
+
   #menuknap {
     display: none;
   }
@@ -253,7 +248,6 @@ footer {
     justify-content: space-between;
     margin: 0;
     padding: 0;
-
     gap: 30px;
   }
 
@@ -299,13 +293,23 @@ footer {
 
   .forord .text_indhold {
     display: grid;
-    grid-template-columns: 1fr minmax(0, 600px) 1fr;
+    grid-template-columns: 1fr minmax(0, 1000px) 1fr;
   }
 
   .text_indhold h1,
   hr,
   p {
     grid-column: 2/3;
+  }
+
+  .web_doku h2,
+  img {
+    grid-column: 2/3;
+  }
+
+  .web_doku {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 1200px) 1fr;
   }
 
   .footer_info {
