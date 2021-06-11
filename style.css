@@ -312,6 +312,15 @@ footer {
     grid-template-columns: 1fr minmax(0, 1200px) 1fr;
   }
 
+  .ux_doku {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 1200px) 1fr;
+  }
+
+  .ux_doku_indhold {
+    grid-column: 2/3;
+  }
+
   .footer_info {
     position: sticky;
     display: flex;
