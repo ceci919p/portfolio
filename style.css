@@ -91,17 +91,9 @@ button {
   height: 0;
 }
 
-.hide {
-  display: none;
-}
-
 .nav_style {
   background-color: white;
   padding: 1rem;
-}
-
-nav li {
-  /* padding: 1rem;*/
 }
 
 header {
@@ -188,16 +180,6 @@ a:hover {
   text-align: center;
 }
 
-.forord {
-  /*text-align: center;*/
-  grid-column: 1/4;
-  background-image: linear-gradient(to right, lightpink, #f2c849);
-}
-
-.forord p {
-  padding: 1rem;
-}
-
 footer {
   background-color: var(--secondary);
 }
@@ -209,6 +191,15 @@ footer {
   padding: 0.5rem 0.5rem;
 }
 
+.overskrift {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+}
+
+.overskrift h1 {
+  grid-column: 2/3;
+}
+
 .round {
   display: block;
   width: 50%;
@@ -218,10 +209,19 @@ footer {
 
 .round img {
   clip-path: circle();
+  max-width: 300px;
 }
 
 .round p {
   text-align: center;
+}
+
+.right {
+  grid-column: 2/3;
+}
+
+.text_left {
+  grid-row: 1;
 }
 
 .wide {
@@ -229,10 +229,20 @@ footer {
   background-image: linear-gradient(to right, #f2c849, #ea819a);
 }
 
+.wide p {
+  padding: 1rem;
+  grid-column: 2/3;
+}
+
 .wide_2 {
   grid-column: 1/4;
   background-color: var(--secondary);
   margin-top: 2rem;
+}
+
+.wide_3 {
+  grid-column: 1/4;
+  background-color: var(--tertiary);
 }
 
 @media (min-width: 700px) {
@@ -294,20 +304,19 @@ footer {
     grid-column: 1/4;
   }
 
-  .forord .text_indhold {
+  .text_indhold {
     display: grid;
     grid-template-columns: 1fr minmax(0, 1000px) 1fr;
   }
 
-  .text_indhold,
-  hr,
-  p {
+  .text_indhold hr p {
     grid-column: 2/3;
   }
 
-  .text_indhold h1 {
+  .text_indhold,
+  h1,
+  hr {
     grid-column: 2/3;
-    text-align: center;
   }
 
   .web_doku img {
@@ -324,12 +333,12 @@ footer {
     grid-template-columns: 1fr minmax(0, 1200px) 1fr;
   }
 
-  .ux_doku {
+  .doku {
     display: grid;
     grid-template-columns: 1fr minmax(0, 1200px) 1fr;
   }
 
-  .ux_doku_indhold {
+  .doku_indhold {
     grid-column: 2/3;
   }
 
@@ -386,11 +395,6 @@ footer {
 
   .round {
     width: 25%;
-  }
-
-  .round_2 {
-    width: 25%;
-    grid-column: 2/3;
   }
 
   .col_right {
