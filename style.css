@@ -34,15 +34,10 @@ body {
   background-color: var(--accent);
 }
 
-main {
-  display: grid;
-  grid-template-columns: 1fr minmax(0, 1200px) 1fr;
-}
-
 main > section {
   grid-column: 2/3;
-  padding-inline: 1rem;
-  padding-block: 1rem;
+  padding-inline: 2rem;
+  padding-block: 2rem;
 }
 
 h1 {
@@ -246,6 +241,11 @@ footer {
 }
 
 @media (min-width: 700px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 1200px) 1fr;
+  }
+
   main > section {
     padding: 0;
   }
@@ -315,8 +315,13 @@ footer {
 
   .text_indhold,
   h1,
+  h2,
   hr {
     grid-column: 2/3;
+  }
+
+  .paragraph {
+    padding-block: 1rem;
   }
 
   .web_doku img {
