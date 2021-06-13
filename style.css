@@ -140,6 +140,7 @@ header .logo img {
   border-radius: 20px;
   width: 100px;
   display: inline;
+  padding: 1rem;
 }
 
 header .logo {
