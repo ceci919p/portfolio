@@ -42,29 +42,49 @@ main > section {
 
 h1 {
   font-family: "montserrat", sans-serif;
-  color: var(--text);
   font-size: 2em;
+  margin-top: 1rem;
+  letter-spacing: 1.1px;
+  color: var(--text);
+  padding-left: 1rem;
 }
 
 h2 {
   font-family: "montserrat", sans-serif;
-  color: var(--text);
-  padding: 1rem;
+  font-size: 2rem;
+  letter-spacing: 1.1px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
   padding-left: 0;
+  color: var(--text);
 }
 
 h3 {
   font-family: "montserrat", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 1.1px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
   color: var(--text);
 }
 
 h4 {
   font-family: "montserrat", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1.1px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
   color: var(--text);
+  font-weight: 600;
 }
 
 p {
   font-family: "montserrat", sans-serif;
+  font-size: 1rem;
+
+  line-height: 25px;
+  /* margin-bottom: 1rem; */
   color: var(--text);
 }
 
@@ -72,10 +92,19 @@ button {
   margin-top: 1rem;
   border: 0;
   background-color: var(--primary);
-  padding: 0.75rem;
+  padding: 0.95rem;
   border-radius: 4px;
   color: var(--text);
   margin-right: 1rem;
+  width: 300px;
+}
+
+.knap_2 {
+  text-align: end;
+}
+
+.knap {
+  text-align: end;
 }
 
 .hidden {
@@ -149,6 +178,14 @@ a:hover {
 
 .knap a:hover {
   color: var(--accent);
+}
+
+.knap_2 a:hover {
+  color: var(--accent);
+}
+
+button:hover {
+  background-color: var(--text);
 }
 
 .splash {
@@ -225,7 +262,7 @@ footer {
 }
 
 .wide p {
-  padding: 1rem;
+  padding: 1rem 0.2rem;
   grid-column: 2/3;
 }
 
@@ -244,10 +281,6 @@ footer {
   main {
     display: grid;
     grid-template-columns: 1fr minmax(0, 1200px) 1fr;
-  }
-
-  main > section {
-    padding: 0;
   }
 
   #menuknap {
@@ -281,6 +314,10 @@ footer {
     display: inline;
   }
 
+  button {
+    width: 150px;
+  }
+
   .knap {
     text-align: end;
     animation-name: pulse_kf;
@@ -302,6 +339,10 @@ footer {
 
   .splash {
     grid-column: 1/4;
+  }
+
+  .splash h1 {
+    font-size: 5em;
   }
 
   .text_indhold {
@@ -408,5 +449,16 @@ footer {
 
   .temabillede {
     max-width: 500px;
+  }
+}
+
+@media (min-width: 1000px) {
+  #portfolio > section {
+    padding: 0rem 3rem;
+  }
+
+  .section_wrapper_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
