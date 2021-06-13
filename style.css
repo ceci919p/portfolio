@@ -242,7 +242,7 @@ footer {
 
 .round img {
   clip-path: circle();
-  max-width: 300px;
+  /* max-width: 300px; */
 }
 
 .round p {
@@ -442,6 +442,10 @@ footer {
 
   .round {
     width: 25%;
+  }
+
+  .round img {
+    max-width: 300px;
   }
 
   .col_right {
