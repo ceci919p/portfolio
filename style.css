@@ -115,6 +115,10 @@ button {
   height: 0;
 }
 
+.hide {
+  display: none;
+}
+
 .nav_style {
   background-color: white;
   padding: 1rem;
@@ -132,7 +136,9 @@ header {
   margin: 0;
   background-color: var(--secondary);
   display: grid;
-  grid-template-columns: 2fr minmax(0, 0.75fr);
+  /*
+  grid-template-columns: 2fr minmax(0, 0.75fr);*/
+  grid-template-columns: 2fr minmax(0, auto);
   z-index: 100;
 }
 
@@ -213,6 +219,36 @@ button:hover {
   text-align: center;
 }
 
+.wide {
+  grid-column: 1/4;
+  /*background-image: linear-gradient(to right, #f2c849, #ea819a);*/
+  background-image: url(billeder/baggrund7.svg);
+}
+
+.forord_center {
+  text-align: center;
+}
+
+.forord_center hr {
+  text-align: center;
+}
+
+.index_forord p {
+  padding-top: 1rem;
+}
+
+.tema_billeder .billede_1 {
+  padding: 1rem;
+}
+
+.tema_billeder .billede_2 {
+  padding: 1rem;
+}
+
+.tema_billeder .billede_3 {
+  padding: 1rem;
+}
+
 footer {
   background-color: var(--secondary);
 }
@@ -259,7 +295,8 @@ footer {
 
 .wide {
   grid-column: 1/4;
-  background-image: linear-gradient(to right, #f2c849, #ea819a);
+  /*background-image: linear-gradient(to right, #f2c849, #ea819a);*/
+  background-image: url(billeder/baggrund6.png);
 }
 
 .wide p {
@@ -321,14 +358,14 @@ footer {
 
   .knap {
     text-align: end;
-    animation-name: pulse_kf;
+    /*animation-name: pulse_kf;
     animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    animation-direction: alternate;
+    animation-direction: alternate; */
   }
 
-  @keyframes pulse_kf {
+  /*@keyframes pulse_kf {
     0% {
       transform: scale(1);
     }
@@ -336,7 +373,7 @@ footer {
     100% {
       transform: scale(1.05);
     }
-  }
+  }*/
 
   .splash {
     grid-column: 1/4;
@@ -360,6 +397,30 @@ footer {
   h2,
   hr {
     grid-column: 2/3;
+  }
+
+  .tema_6 {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+  }
+
+  .tema_6_indhold {
+    grid-column: 2/3;
+  }
+  .tema_6_billede {
+    padding: 1rem;
+  }
+
+  .tema_billeder {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 1200px) 1fr;
+  }
+
+  .tema_billeder {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin: 2rem;
   }
 
   .paragraph {
