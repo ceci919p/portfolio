@@ -144,8 +144,6 @@ a:hover {
 }
 
 .hidden {
-  /*    display: none;*/
-  /*    transform: scale(0);*/
   transform: translateX(-100%);
   opacity: 0;
   height: 0;
@@ -244,19 +242,14 @@ details > summary {
 
 /*SECTIONS MED BAGGRUND TIL KANT*/
 
-.wide {
-  grid-column: 1/4;
-  /*background-image: linear-gradient(to right, #f2c849, #ea819a);*/
-  background-image: url(billeder/baggrund7.svg);
-}
-
 .wide h3 {
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .wide {
   grid-column: 1/4;
-  background-image: url(billeder/baggrund6.png);
+  background-image: url(billeder/baggrund6.webp);
   padding: 2rem;
 }
 
@@ -268,12 +261,6 @@ details > summary {
 .wide_2 {
   grid-column: 1/4;
   background-color: var(--secondary);
-  padding: 2rem;
-}
-
-.wide_3 {
-  grid-column: 1/4;
-  background-color: var(--tertiary);
   padding: 2rem;
 }
 
@@ -298,6 +285,10 @@ details > summary {
 }
 
 .text_left p {
+  padding-inline: 0.5rem;
+}
+
+.text_right p {
   padding-inline: 0.5rem;
 }
 
@@ -363,18 +354,11 @@ footer {
   h3 {
     margin-bottom: 0;
     margin-top: 0;
-    /*padding-left: 1rem;*/
     color: var(--text);
-    /* padding-inline: 0.5rem;*/
   }
 
   h4 {
     padding-left: 0.5rem;
-  }
-
-  p {
-    /*padding-inline: 1rem; */
-    /* padding-inline: 0.5rem; */
   }
 
   /*HEADER */
@@ -427,9 +411,9 @@ footer {
     padding-inline: 5rem;
   }
 
-  /* .wide_2 {
-    padding-inline: 4rem;
-  } */
+  .wide_2 {
+    padding-inline: 5rem;
+  }
 
   /*MUTUAL SECTION WRAPPER BRUGT TIL AT LAVE 2 GRID COLUMNS*/
   .section_wrapper {
@@ -456,8 +440,12 @@ footer {
   /*ØVERSTE TEKST PÅ ALLE SIDER UNDTAGEN FORSIDE OG PORTFOLIO FORSIDE, DER ER FORORD CENTER*/
   .forord {
     display: grid;
-    grid-template-columns: 1fr minmax(0, 1200px) 1fr;
+    grid-template-columns: 1fr minmax(0, 1000px) 1fr;
     padding-inline: 3rem;
+  }
+
+  .forord_indhold {
+    grid-column: 2/3;
   }
 
   .forord hr p {
@@ -507,7 +495,7 @@ footer {
   /*PORTFOLIO*/
 
   #portfolio > section {
-    padding-inline: 3rem 5rem;
+    padding-inline: 1rem 1rem;
     padding-block: 0;
   }
 
@@ -554,7 +542,7 @@ footer {
 
   .web_doku {
     display: grid;
-    grid-template-columns: 1fr minmax(0, 1200px) 1fr;
+    grid-template-columns: 1fr minmax(0, 1000px) 1fr;
     /* padding-inline: 3rem; */
   }
 
@@ -656,6 +644,7 @@ footer {
 
 @media (min-width: 1000px) {
   main > section {
+    /*padding-inline: 6rem;*/
     padding-inline: 5rem;
   }
 
@@ -677,6 +666,7 @@ footer {
 
   .wide_2 {
     padding: 0;
+
     padding-inline: 5rem;
     padding-block: 2rem;
   }
@@ -685,8 +675,6 @@ footer {
 
   .forord {
     padding-inline: 0;
-    padding-right: 5rem;
-    margin-right: 5rem;
   }
 
   /*STØRRE GAP TILFØJET TIL BILLEDE COLLAGE*/
@@ -745,7 +733,7 @@ footer {
 
   .text_right {
     padding-right: 0;
-    /*padding-left: 2rem;*/
+
     padding-left: 5rem;
   }
 
@@ -755,5 +743,11 @@ footer {
 
   .footer_info p {
     font-size: 1rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  main > section {
+    padding-inline: 6rem;
   }
 }
