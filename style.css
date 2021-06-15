@@ -25,12 +25,10 @@ html {
   --space-md: 1.5rem;
   --space-lg: 2rem;
   --space-xl: 3rem;
-  --space-xxl: 6rem;
+  --space-xxl: 5rem;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   background-color: var(--accent);
 }
 
@@ -40,10 +38,11 @@ main > section {
   padding-block: 2rem;
 }
 
+/*TEKST*/
+
 h1 {
   font-family: "montserrat", sans-serif;
   font-size: 2em;
-
   letter-spacing: 1.1px;
   color: var(--text);
 }
@@ -81,65 +80,28 @@ h4 {
 p {
   font-family: "montserrat", sans-serif;
   font-size: 1rem;
-
   line-height: 25px;
-  /* margin-bottom: 1rem; */
   color: var(--text);
-  padding-block: 1rem;
+  padding-bottom: 1rem;
 }
 
-button {
-  margin-top: 1rem;
-  border: 0;
-  background-color: var(--primary);
-  padding: 0.95rem;
-  border-radius: 4px;
-  color: var(--text);
-  margin-right: 1rem;
-  width: 300px;
-}
-
-.knap_2 {
-  text-align: end;
-}
-
-.knap {
-  text-align: end;
-}
-
-.hidden {
-  /*    display: none;*/
-  /*    transform: scale(0);*/
-  transform: translateX(-100%);
-  opacity: 0;
-  height: 0;
-}
-
-.hide {
-  display: none;
-}
-
-.nav_style {
-  background-color: white;
-  padding: 1rem;
-}
+/*HEADER*/
 
 header {
-  /* display: flex; */
   position: sticky;
   top: 0;
-  /*
-  padding: 1rem 1.5rem;*/
   gap: 20px;
   text-align: left;
   box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.3);
   margin: 0;
   background-color: var(--secondary);
   display: grid;
-  /*
-  grid-template-columns: 2fr minmax(0, 0.75fr);*/
   grid-template-columns: 2fr minmax(0, auto);
   z-index: 100;
+}
+
+header .logo {
+  grid-area: 1/2;
 }
 
 header .logo img {
@@ -147,20 +109,6 @@ header .logo img {
   width: 100px;
   display: inline;
   padding: 1rem;
-}
-
-header .logo {
-  grid-area: 1/2;
-}
-
-#menuknap {
-  display: inline-block;
-  padding: 1rem;
-}
-
-#menu {
-  transition: transform 0.3s;
-  transform-origin: top left;
 }
 
 header ul li {
@@ -183,17 +131,57 @@ a:hover {
   color: var(--tertiary);
 }
 
-.knap a:hover {
-  color: var(--accent);
+/*BURGER MENU*/
+
+#menu {
+  transition: transform 0.3s;
+  transform-origin: top left;
 }
 
-.knap_2 a:hover {
-  color: var(--accent);
+#menuknap {
+  display: inline-block;
+  padding: 1rem;
+}
+
+.hidden {
+  /*    display: none;*/
+  /*    transform: scale(0);*/
+  transform: translateX(-100%);
+  opacity: 0;
+  height: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.nav_style {
+  background-color: white;
+  padding: 1rem;
+}
+
+/*KNAPPER*/
+
+button {
+  margin-top: 1rem;
+  border: 0;
+  background-color: var(--primary);
+  padding: 0.95rem;
+  border-radius: 4px;
+  color: var(--text);
+  margin-right: 1rem;
+  width: 300px;
+}
+
+.knap {
+  text-align: end;
 }
 
 button:hover {
   background-color: var(--text);
 }
+
+/*FORSIDE*/
 
 .splash {
   display: grid;
@@ -219,6 +207,43 @@ button:hover {
   text-align: center;
 }
 
+/*PORTFOLIO*/
+
+#portfolio > h2 {
+  font-size: 1.85rem;
+}
+
+/*FORORD TIL FORSIDE OG PORTFOLIO*/
+
+.forord_center {
+  text-align: center;
+}
+
+.forord_center hr {
+  text-align: center;
+}
+
+/**FÆLLES STYLES**/
+
+/*DETAILS AND SUMMARY PÅ ALLE UNDERSIDER I PORTFOLIO*/
+
+details > summary {
+  font-family: "monserrat", sans-serif;
+
+  background-color: var(--secondary);
+  border-radius: 4px;
+  margin-top: 5rem;
+  padding: 1rem;
+  border: black;
+  cursor: pointer;
+}
+
+details > p {
+  background-color: red;
+}
+
+/*SECTIONS MED BAGGRUND TIL KANT*/
+
 .wide {
   grid-column: 1/4;
   /*background-image: linear-gradient(to right, #f2c849, #ea819a);*/
@@ -229,81 +254,8 @@ button:hover {
   text-align: center;
 }
 
-.forord_center {
-  text-align: center;
-}
-
-.forord_center hr {
-  text-align: center;
-}
-
-.index_forord p {
-  padding-top: 1rem;
-}
-
-.tema_billeder .billede_1 {
-  padding: 1rem;
-}
-
-.tema_billeder .billede_2 {
-  padding: 1rem;
-}
-
-.tema_billeder .billede_3 {
-  padding: 1rem;
-}
-
-#portfolio > h2 {
-  font-size: 1.85rem;
-}
-
-footer {
-  background-color: var(--secondary);
-}
-
-.footer_info .navn,
-.mail,
-.telefon {
-  text-align: center;
-  padding: 0.5rem 0.5rem;
-}
-
-.overskrift {
-  display: grid;
-  grid-template-columns: 1fr minmax(0, 1000px) 1fr;
-}
-
-.overskrift h1 {
-  grid-column: 2/3;
-}
-
-.round {
-  display: block;
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.round img {
-  clip-path: circle();
-  /* max-width: 300px; */
-}
-
-.round p {
-  text-align: center;
-}
-
-.right {
-  grid-column: 2/3;
-}
-
-.text_left {
-  grid-row: 1;
-}
-
 .wide {
   grid-column: 1/4;
-  /*background-image: linear-gradient(to right, #f2c849, #ea819a);*/
   background-image: url(billeder/baggrund6.png);
   padding: 2rem;
 }
@@ -325,6 +277,50 @@ footer {
   padding: 2rem;
 }
 
+/*BILLEDE COLLAGE I OM_MIG OG FORSIDE*/
+
+.tema_billeder .billede_1 {
+  padding: 1rem;
+}
+
+.tema_billeder .billede_2 {
+  padding: 1rem;
+}
+
+.tema_billeder .billede_3 {
+  padding: 1rem;
+}
+
+/*OM MIG SIDE*/
+
+.text_left {
+  grid-row: 1;
+}
+
+.text_left p {
+  padding-inline: 0.5rem;
+}
+
+/*PLACERER TEMABILLEDE TIL HØJRE I CONTENT OG ANIMATION*/
+.right {
+  grid-column: 2/3;
+}
+
+/*FOOTER*/
+
+footer {
+  background-color: var(--secondary);
+}
+
+.footer_info .navn,
+.mail,
+.telefon {
+  text-align: center;
+  padding: 0.5rem 0.5rem;
+}
+
+/*SKÆRME STØRRE END 700PX*/
+
 @media (min-width: 700px) {
   main {
     display: grid;
@@ -333,6 +329,50 @@ footer {
 
   main > section {
     padding-inline: 5rem;
+  }
+
+  /*TEKST*/
+  h1 {
+    margin-top: 1rem;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding-top: 0;
+    padding-left: 0.5rem;
+  }
+
+  h3 {
+    margin-bottom: 0;
+    margin-top: 0;
+    /*padding-left: 1rem;*/
+    color: var(--text);
+    /* padding-inline: 0.5rem;*/
+  }
+
+  h4 {
+    padding-left: 0.5rem;
+  }
+
+  p {
+    /*padding-inline: 1rem; */
+    /* padding-inline: 0.5rem; */
+  }
+
+  /*HEADER */
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1rem 1.5rem;
+  }
+
+  header .logo img {
+    border-radius: 20px;
+    width: 100px;
+    display: inline;
   }
 
   #menuknap {
@@ -353,109 +393,70 @@ footer {
     display: inline-block;
   }
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 1rem 1.5rem;
-  }
-
-  header .logo img {
-    border-radius: 20px;
-    width: 100px;
-    display: inline;
-  }
-
-  h1 {
-    margin-top: 1rem;
-  }
-
-  h2 {
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    padding-top: 0;
-    padding-left: 0.5rem;
-  }
-
-  h3 {
-    margin-bottom: 0;
-    margin-top: 0;
-    /*padding-left: 1rem;*/
-    color: var(--text);
-    padding-inline: 0.5rem;
-  }
-
-  h4 {
-    padding-left: 0.5rem;
-  }
-
-  p {
-    /*padding-inline: 1rem; */
-    padding-inline: 0.5rem;
-  }
-
+  /*KNAPPER*/
   button {
     width: 150px;
   }
 
-  .text_left h2 {
-    padding: 0.5rem;
-  }
-
-  .text_right {
-    padding-left: 2rem;
-  }
-
-  .text_right h2 {
-    padding: 0.5rem;
-  }
-
   .knap {
     text-align: end;
-    /*animation-name: pulse_kf;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: alternate; */
+    padding-block: 1rem;
   }
 
-  /*@keyframes pulse_kf {
-    0% {
-      transform: scale(1);
-    }
+  /**FÆLLES STYLES**/
+  /*SECTIONS MED BAGGRUND TIL KANT*/
 
-    100% {
-      transform: scale(1.05);
-    }
-  }*/
+  .wide {
+    padding-inline: 5rem;
+  }
 
+  /* .wide_2 {
+    padding-inline: 4rem;
+  } */
+
+  /*MUTUAL SECTION WRAPPER BRUGT TIL AT LAVE 2 GRID COLUMNS*/
+  .section_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+  }
+
+  /*STØRRELSE ANGIVET FOR ALLE TEMABILLEDER*/
+  .temabillede {
+    max-width: 500px;
+  }
+
+  /*TEKST/ALLE PORTFOLIO OPGAVEBESKRIVELSER*/
+  .paragraph {
+    padding-block: 1rem;
+  }
+
+  /*ØVERSTE TEKST PÅ ALLE SIDER UNDTAGEN FORSIDE OG PORTFOLIO FORSIDE, DER ER FORORD CENTER*/
+  .forord {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 1200px) 1fr;
+    padding-inline: 3rem;
+  }
+
+  .forord hr p {
+    grid-column: 2/3;
+  }
+
+  .forord,
+  h1,
+  h2,
+  hr {
+    grid-column: 2/3;
+    padding-left: 0rem;
+  }
+
+  /*FORSIDE*/
   .splash {
     grid-column: 1/4;
   }
 
   .splash h1 {
     font-size: 5em;
-  }
-
-  .text_indhold {
-    display: grid;
-    grid-template-columns: 1fr minmax(0, 1000px) 1fr;
-    padding-inline: 3rem;
-  }
-
-  .text_indhold hr p {
-    grid-column: 2/3;
-  }
-
-  .text_indhold,
-  h1,
-  h2,
-  hr {
-    grid-column: 2/3;
-  }
-
-  .text_left {
-    padding-right: 2rem;
   }
 
   .tema_6 {
@@ -466,92 +467,23 @@ footer {
   .tema_6_indhold {
     grid-column: 2/3;
   }
-  .tema_6_billede {
-    /* padding: 1rem;*/
+
+  .tema_6_text p {
+    padding-top: 0.5rem;
   }
 
-  .tema_billeder {
-    display: grid;
-    grid-template-columns: 1fr minmax(0, 1200px) 1fr;
+  /*.tema_6_text h3 {
+    padding-left: 1rem;
+  }*/
+
+  /*PORTFOLIO*/
+
+  #portfolio > section {
+    padding-inline: 3rem 5rem;
+    padding-block: 0;
   }
 
-  .tema_billeder {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
-    margin: 2rem;
-  }
-
-  .billede_wrapper {
-    display: grid;
-    grid-template-columns: 1fr minmax(0, 1200px) 1fr;
-  }
-
-  .om_mig_billeder {
-    grid-column: 2/3;
-  }
-
-  .profilbillede2 {
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-
-  .profilbillede1 {
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-
-  .paragraph {
-    padding-block: 1rem;
-  }
-
-  .web_doku img {
-    grid-column: 2/3;
-  }
-
-  .web_doku h2 {
-    grid-column: 2/3;
-  }
-
-  .web_doku {
-    display: grid;
-    grid-template-columns: 1fr minmax(0, 1200px) 1fr;
-  }
-
-  .doku {
-    display: grid;
-    grid-template-columns: 1fr minmax(0, 1200px) 1fr;
-  }
-
-  .doku_indhold {
-    grid-column: 2/3;
-  }
-
-  .footer_info {
-    position: sticky;
-    display: flex;
-    justify-content: space-around;
-    top: 0;
-    padding: 1rem 1.5rem;
-    margin: 0;
-  }
-
-  .section_wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-  }
-
-  .section_wrapper .tegning {
-    grid-column: 2/3;
-  }
-
-  .col_left {
-    background-color: var(--secondary);
-    padding: 3rem 1rem;
-    border-right: solid var(--text);
-    border-radius: 20px 0px 0px 20px;
-  }
+  /*PORTFOLIO TIDSLINJE*/
 
   .col_left_top {
     background-color: var(--secondary);
@@ -559,6 +491,13 @@ footer {
     border-right: solid var(--text);
     border-radius: 0px 0px 0px 20px;
     padding-top: 100px;
+  }
+
+  .col_left {
+    background-color: var(--secondary);
+    padding: 3rem 1rem;
+    border-right: solid var(--text);
+    border-radius: 20px 0px 0px 20px;
   }
 
   .col_right {
@@ -579,27 +518,98 @@ footer {
     padding-bottom: 100px;
   }
 
-  #portfolio > section {
-    padding-inline: 3rem 5rem;
-    padding-block: 0;
-  }
-
-  .round {
-    width: 25%;
-  }
-
-  .round img {
-    max-width: 300px;
-  }
-
   .col_right {
     grid-column: 2/3;
   }
 
-  .temabillede {
-    max-width: 500px;
+  /*WEB UNDERSIDE*/
+
+  .web_doku {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 1200px) 1fr;
+    /* padding-inline: 3rem; */
+  }
+
+  .web_doku h2 {
+    grid-column: 2/3;
+  }
+
+  .web_doku img {
+    grid-column: 2/3;
+  }
+
+  /*DOKU PÅ ALLE UNDERSIDER, SKAL MÅSKE SLETTES*/
+
+  .doku {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 1200px) 1fr;
+  }
+
+  .doku_indhold {
+    grid-column: 2/3;
+  }
+
+  /*BILLEDE COLLAGE PÅ FORSIDE OG UNDER OM MIG*/
+
+  /*FORSIDE BILLEDE COLLAGE*/
+  .tema_billeder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  /*OM MIG BILLEDE COLLAGE, TEMA BILLEDER BRUGT SOM GRID MED 3 FR*/
+  .billede_wrapper {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 1200px) 1fr;
+  }
+
+  .om_mig_billeder {
+    grid-column: 2/3;
+  }
+
+  /*OM MIG*/
+
+  .text_left {
+    padding-right: 2rem;
+  }
+  .text_left h2 {
+    padding: 0.5rem;
+  }
+
+  .text_right {
+    padding-right: 2rem;
+  }
+
+  .text_right h2 {
+    padding: 0.5rem;
+  }
+
+  .section_wrapper2 .profilbillede2 img {
+    margin-left: 0.7rem;
+  }
+
+  .section_wrapper2 .profilbillede1 img {
+    margin-left: 0.7rem;
+  }
+
+  .section_wrapper2 .tegning {
+    margin-left: 0.5rem;
+    grid-column: 2/3;
+  }
+
+  /*FOOTER*/
+  .footer_info {
+    position: sticky;
+    display: flex;
+    justify-content: space-around;
+    top: 0;
+    padding: 1rem 1.5rem;
+    margin: 0;
   }
 }
+
+/*SKÆRME STØRRE END 1000PX*/
 
 @media (min-width: 1000px) {
   main > section {
@@ -609,8 +619,87 @@ footer {
     padding: 0rem 3rem;
   }
 
-  .section_wrapper_2 {
+  /*TEKST*/
+  h4 {
+    padding-left: 0;
+  }
+
+  /**FÆLLES STYLES**/
+  /*SECTIONS MED BAGGRUND TIL KANT*/
+
+  .wide {
+    padding-inline: 5rem;
+  }
+
+  .wide_2 {
+    padding: 0;
+    padding-inline: 5rem;
+  }
+
+  /*ØVERSTE TEKST PÅ ALLE SIDER UNDTAGEN FORSIDE OG PORTFOLIO FORSIDE, DER ER FORORD CENTER*/
+
+  .forord {
+    padding-inline: 0;
+    padding-right: 5rem;
+    margin-right: 5rem;
+  }
+
+  /*STØRRE GAP TILFØJET TIL BILLEDE COLLAGE*/
+
+  .tema_billeder {
+    gap: 30px;
+  }
+
+  /*TEKST/ALLE PORTFOLIO OPGAVEBESKRIVELSER*/
+  .paragraph {
+    padding-right: 5rem;
+    margin-right: 5rem;
+  }
+
+  /*FORSIDE*/
+
+  .forord_center p {
+    padding-top: 1rem;
+  }
+
+  .tema_6_text {
+    padding-block: 2rem;
+  }
+
+  .tema_6_text p {
+    padding: 1rem 1rem;
+  }
+
+  .tema_6_text h3 {
+    padding-left: 1rem;
+  }
+
+  /*PORTFOLIO*/
+  /*UNDERSIDE*/
+  .tema_grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  /*OM OS SIDE */
+
+  .section_wrapper2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section_wrapper2 .profilbillede1 .profilbillede2 {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .section_wrapper2 .profilbillede2 img {
+    margin-left: 0;
+  }
+
+  .text_right {
+    padding-right: 0;
+    padding-left: 2rem;
   }
 }
